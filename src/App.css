@@ -1,33 +1,219 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --mainOrange:#de362f;
+  --mainBlue: #0072b0;
+  --primaryColor: #cfe4f6;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+body {
+  
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+
+.textOrange{
+  color: var(--mainOrange);
+}
+h1 {
+  
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+h2 {
+ 
+  margin-bottom: 0.75em;
+}
+h3 {
+ 
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h4 {
+  
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+h5 {
+  
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+h6 {
+  
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+button{
+  align-items: flex-end
+}
+.loading {
+  text-transform: capitalize;
   text-align: center;
+  margin-top: 3rem;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.error {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0;
 }
+.empty-search {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  padding: 1rem;
+  letter-spacing: var(--mainSpacing);
+}
+/* end of globals */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+
+
+nav.navbar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.3rem 1.2rem 0 1.2rem;
+  background: var(--offWhite);
+  z-index: 1;
+}
+.nav-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  
+}
+.nav-icon {
+  font-size: 1.5rem;
+  color: var(--mainBlue);
+}
+.nav-links {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+  float: right;
+  
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--mainOrange);
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+  float:right
+}
+.nav-links a:hover {
+  color: var(--primaryColor);
+}
+
+.show-nav {
+  height: 100px;
+}
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    margin-left: 4rem;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+/* end of navbar */
+/* Header */
+
+.box {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+#imageHolder
+{
+	background:url(./images/cgEmblem.png) no-repeat  center center;
+	height: 100px;
+	width:150px;
+  background-size: contain;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+#comImageHolder
+{
+	background:url(./images/RBH.png) no-repeat center center;
+	height: 100px;
+	width:150px;
+  background-size: contain;
+  display: block;
+  margin: auto
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pageTitle{
+  margin-top: 7rem
 }
+
+.communityHeader{
+  background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./images/PRBoat.jpg') no-repeat center center ;
+  min-height: calc(100vh - 86px);
+  background-size: contain
+}
+
+.header-hero, .default-hero {
+  background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./images/coast_guard_boat.jpg') no-repeat center center fixed; /*no-repeat  0px 100% / cover transparent; */
+  min-height: calc(100vh - 86px);
+}
+
+.default-hero{
+  background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./images/coast_guard_boat.jpg') no-repeat center center fixed;
+}
+/* End of Header */
