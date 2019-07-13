@@ -5,7 +5,7 @@ export default function Header({children, title, styleClass, subTitle}) {
         <header>
             <div className="container-fluid">
                 <div className={`row align-items-center ${styleClass}`}>
-                
+                <i className="material-icons">code</i>
                     <div className="col text-center">
                    
                     </div>

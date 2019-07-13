@@ -6,6 +6,8 @@ import Navbar from './components/Navbar';
 import  Home  from './pages/Home';
 import Communities  from './pages/Communities';
 import  Error  from './pages/Error';
+import Footer from './components/Footer'
+
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
     <Switch>
       <Route exact path="/" component={Home}/> 
       <Route exact path="/communities" component={Communities}/>
+      
       <Route component={Error} />
     </Switch>
+    <Footer/>
     
     </>
   );
