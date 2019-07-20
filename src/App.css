@@ -21,9 +21,15 @@ body {
   
   color: var(--mainBlack);
   background: var(--mainWhite);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.4;
 }
+/* span.MuiButton-label{
+  color:var(--mainOrange)
+}
+span.MuiIconButton-label{
+  color:var(--mainOrange)
+} */
 
 .textOrange{
   color: var(--mainOrange);
@@ -57,6 +63,15 @@ h6 {
   font-weight: bold;
   margin-bottom: 1.5em;
 }
+.brand{
+text-decoration: none;
+color: var(--mainBlue)
+
+}
+.color{
+background-color: var(--mainGrey);
+box-shadow: var(--lightShadow)
+}
 
 .btn-primary {
   display: inline-block;
@@ -74,9 +89,7 @@ h6 {
   background: transparent;
   color: var(--primaryColor);
 }
-button{
-  align-items: flex-end
-}
+
 .loading {
   text-transform: capitalize;
   text-align: center;
@@ -99,6 +112,7 @@ button{
 /* Navbar */
 
 
+
 nav.navbar {
   position: fixed;
   display: block;
@@ -106,12 +120,13 @@ nav.navbar {
   left: 0;
   width: 100%;
   padding: 0.3rem 1.2rem 0 1.2rem;
-  background: var(--offWhite);
   z-index: 1;
+  
 }
 .nav-header {
   display: flex;
   justify-content: space-between;
+  color: var(--mainOrange)
 }
 .nav-btn {
   background: transparent;
@@ -130,20 +145,35 @@ nav.navbar {
   overflow: hidden;
   transition: var(--mainTransition);
   list-style-type: none;
-  float: right;
+  float: left;
+  text-align: left
   
 }
+
+/* header{
+  background-color: #ececec !important; 
+  
+} */
+
+footer.footer{
+  background-color: #ececec !important
+}
+
+.MuiPaper-root{
+  background-color: #ececec !important;
+  
+}
+
 .nav-links a {
   display: block;
   text-decoration: none;
   padding: 1rem 0;
   color: var(--mainOrange);
   transition: var(--mainTransition);
-  text-align: center;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
-  float:right
+  
 }
 .nav-links a:hover {
   color: var(--primaryColor);
@@ -217,3 +247,52 @@ nav.navbar {
   background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./images/coast_guard_boat.jpg') no-repeat center center fixed;
 }
 /* End of Header */
+
+/* Footer */
+
+.inlineBlock {
+  display: inline-block;
+  padding: 0px;
+  width: auto
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent
+}
+.footerWhiteFont {
+  
+    color: "#FFFFFF"
+  }
+
+
+.footer {
+  padding: 0.9375rem 0;
+  text-align: center;
+  display: flex;
+  z-index: 2;
+  position: relative;
+  background-color: var(--darkGrey)
+}
+
+.block {
+  color: inherit;
+  padding: 0.9375rem;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-decoration: none;
+  position: relative;
+  display: block
+}
+.left {
+  float: left!important;
+  display: block
+}
+.right {
+  padding: 15px 0;
+  margin: 0;
+  float: right!important
+}

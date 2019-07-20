@@ -33,7 +33,8 @@ var footerStyle = {
     textAlign: "center",
     display: "flex",
     zIndex: "2",
-    position: "relative"
+    position: "relative",
+    backgroundColor: "#ececec !important"
   },
   a: {
     color: _materialKitReact.primaryColor,
@@ -54,7 +55,7 @@ var footerStyle = {
   inlineBlock: {
     display: "inline-block",
     padding: "0px",
-    width: "auto"
+    width: "auto",
   },
   icon: {
     width: "18px",

@@ -8,8 +8,8 @@ export default function Home() {
   
   
     return (
-
-          <h4>
+        <>
+         
             <Header title="coast guard" subTitle="Coasties helping Coasties">
             <div className="box">
             <div id="imageHolder"></div>
@@ -18,10 +18,10 @@ export default function Home() {
             </Header>
 
             <div>
-
+            
             </div>
             
-            </h4>
+            </>
 
 
         // <div>

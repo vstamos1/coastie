@@ -5,10 +5,10 @@ export default function Header({children, title, styleClass, subTitle}) {
         <header>
             <div className="container-fluid">
                 <div className={`row align-items-center ${styleClass}`}>
-                <i className="material-icons">code</i>
+                
                     <div className="col text-center">
                    
-                    </div>
+                   
                         <h4 className="wrap text-light text-uppercase letter-spacing text-slanted">
                         {title}
                         </h4>
@@ -18,7 +18,7 @@ export default function Header({children, title, styleClass, subTitle}) {
                         </h5>
                         {children}
                     </div>
-                
+                    </div>
                 </div>
             
         </header>

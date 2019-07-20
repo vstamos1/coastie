@@ -10,13 +10,46 @@ export default class Navbar extends Component {
   handleToggle = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
+  headerColorChange = () => {  
+    const { classes, color, changeColorOnScroll } = this.props;
+    const windowsScrollTop = window.pageYOffset;
+    if (windowsScrollTop > 100) {
+      document.body
+        .getElementsByTagName("nav")[0]
+        .classList.remove("color");
+
+        
+      document.body
+        .getElementsByTagName("nav")[0]
+        .classList.add("color");
+    } else {
+      document.body
+        .getElementsByTagName("nav")[0]
+        .classList.add("color");
+      document.body
+        .getElementsByTagName("nav")[0]
+        .classList.remove("color");
+    }
+  };
+
+  componentDidMount() {
+    if (true) {
+      window.addEventListener("scroll", this.headerColorChange);
+    }
+  }
+  componentWillUnmount() {
+    if (this.props.changeColorOnScroll) {
+      window.removeEventListener("scroll", this.headerColorChange);
+    }
+  }
+
   render() {
     return (
       <nav className="navbar nav">
         <div className="nav-center">
-          <div className="nav-header">
+          <div  className="nav-header pt-1">
             <Link to="/" onClick={this.handleToggle}>
-              <img width="100" src={logo} alt="Coastie logo" />
+              <h4 className="pt-1 brand">Coastie.Us</h4>
             </Link>
             <button
               type="button"
