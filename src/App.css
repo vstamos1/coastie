@@ -73,6 +73,16 @@ background-color: var(--mainGrey);
 box-shadow: var(--lightShadow)
 }
 
+.nav{
+  background-color: var(--mainBlue) !important;
+  box-shadow: var(--darkShadow);
+  position: fixed!important;
+    top: 10px;
+    right: 10px; 
+    margin: 10px;
+    z-index: 1;
+}
+
 .btn-primary {
   display: inline-block;
   text-decoration: none;
@@ -122,11 +132,26 @@ nav.navbar {
   padding: 0.3rem 1.2rem 0 1.2rem;
   z-index: 1;
   
+  
+}
+.nav-brand{
+  margin:10px;
+  z-index: 1;
+  opacity: 1
 }
 .nav-header {
-  display: flex;
+  display: block;
+  width:100%;
   justify-content: space-between;
-  color: var(--mainOrange)
+  color: var(--mainOrange);
+  margin: 0px;
+  position: fixed;
+  z-index: 1;
+  font-size: 1.3em;
+  text-shadow: 2px 2px var(--mainBlue);
+  background: var(--mainGrey);
+  box-shadow: var(--lightShadow);
+  opacity: .9;
 }
 .nav-btn {
   background: transparent;
@@ -159,10 +184,7 @@ footer.footer{
   background-color: #ececec !important
 }
 
-.MuiPaper-root{
-  background-color: #ececec !important;
-  
-}
+
 
 .nav-links a {
   display: block;
@@ -221,11 +243,17 @@ footer.footer{
 #comImageHolder
 {
 	background:url(./images/RBH.png) no-repeat center center;
-	height: 100px;
-	width:150px;
+
+  width:80px;
+  height: 50px;
   background-size: contain;
   display: block;
-  margin: auto
+  
+  position: fixed;
+  top:10px;
+  margin: auto;
+  left: calc(50vw - 50px );
+  z-index: 1;
 }
 
 .pageTitle{
@@ -234,13 +262,17 @@ footer.footer{
 
 .communityHeader{
   background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./images/PRBoat.jpg') no-repeat center center ;
-  min-height: calc(100vh - 86px);
-  background-size: contain
+  min-height: calc(100vh );
+  background-size: fill;
+  
+
 }
 
 .header-hero, .default-hero {
   background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./images/coast_guard_boat.jpg') no-repeat center center fixed; /*no-repeat  0px 100% / cover transparent; */
   min-height: calc(100vh - 86px);
+  
+ 
 }
 
 .default-hero{
@@ -265,7 +297,9 @@ a {
   
     color: "#FFFFFF"
   }
+.brand-header{
 
+}
 
 .footer {
   padding: 0.9375rem 0;
